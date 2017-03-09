@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.0"
+
+    defaultConfig {
+        applicationId "app.Daniel.bluetoothspp"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':library')
+    compile 'me.itangqi.waveloadingview:library:0.3.5'
+    compile 'com.github.clans:fab:1.6.4'
+    compile 'com.google.android.gms:play-services:8.3.0'
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:cardview-v7:23.0.1'
+    compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile 'com.android.support:design:23.0.1'
+    compile 'info.hoang8f:fbutton:1.0.5'
+    compile 'com.android.support:support-v4:23.0.1'
+}
+

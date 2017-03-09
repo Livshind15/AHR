@@ -1,0 +1,99 @@
+
+<!--
+ Copyright 2014 Akexorcist
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".Main"
+    android:theme="@style/AppTheme.NoTitle">
+
+    <requestFocus />
+
+    <me.itangqi.waveloadingview.WaveLoadingView
+        android:id="@+id/toggle"
+        android:layout_width="130pt"
+        android:layout_height="130pt"
+        app:wlv_borderWidth="3dp"
+        app:wlv_progressValue="40"
+        app:wlv_shapeType="circle"
+        app:wlv_borderColor="@android:color/white"
+        app:wlv_round_rectangle="true"
+        app:wlv_triangle_direction="north"
+        app:wlv_titleCenterStrokeColor="@android:color/white"
+        app:wlv_titleCenterStrokeWidth="3dp"
+        app:wlv_titleCenter="Center Title"
+        app:wlv_titleCenterColor="@color/primary"
+        app:wlv_titleCenterSize="24sp"
+        app:wlv_waveAmplitude="70"
+        app:wlv_waveColor="@android:color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp" />
+    <info.hoang8f.widget.FButton
+    android:id="@+id/button1"
+    android:layout_width="wrap_content"
+    android:layout_height="40pt"
+        android:text="&#x25B2;"
+        android:textSize="40sp"
+        android:textColor="@color/primary"
+        fbutton:shadowEnabled="true"
+    fbutton:shadowHeight="5dp"
+    fbutton:cornerRadius="5dp"
+        fbutton:buttonColor="@android:color/white"
+        fbutton:shadowColor="@color/text_primary"
+        android:layout_alignTop="@+id/button4"
+        android:layout_alignRight="@+id/toggle"
+        android:layout_alignEnd="@+id/toggle" />
+    <info.hoang8f.widget.FButton
+        android:id="@+id/button2"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40pt"
+        android:text="&#x25BC;"
+        android:textSize="40sp"
+        android:textColor="@color/primary"
+        fbutton:buttonColor="@android:color/white"
+        fbutton:shadowColor="@color/text_primary"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="5dp"
+        fbutton:cornerRadius="5dp"
+        android:layout_below="@+id/toggle"
+        android:layout_alignLeft="@+id/toggle"
+        android:layout_alignStart="@+id/toggle"
+        />
+
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:text="@string/status"
+        android:textSize="12sp" />
+
+
+
+
+</RelativeLayout>
